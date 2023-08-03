@@ -5,7 +5,7 @@ namespace FirstMinimalApi.WebApi.Data;
 
 public sealed class MinimalContextDb : DbContext
 {
-    public MinimalContextDb(DbContextOptions options) : base(options)
+    public MinimalContextDb(DbContextOptions<MinimalContextDb> options) : base(options)
     { }
 
     public DbSet<Fornecedor> Fornecedores => Set<Fornecedor>();
